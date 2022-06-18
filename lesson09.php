@@ -15,6 +15,7 @@ $scores = array(10,60,90,70,50);
    }
    echo $score."は".$count."です。" ;
  }
+ 
 ?>
 
 

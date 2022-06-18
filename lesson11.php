@@ -12,5 +12,6 @@ $today = new DateTime('now');
 $day = new DateTime('2020-01-01');
 $diff = $day->diff($today);
 echo $diff->days
+
 ?>
 

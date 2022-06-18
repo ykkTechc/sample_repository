@@ -7,6 +7,7 @@ $user = array(
 echo $user["name"];
 echo "<br/>" ;
 echo $user["age"], "歳" , "・" , $user["gender"];
+
 ?>
 
 

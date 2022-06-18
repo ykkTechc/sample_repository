@@ -9,6 +9,7 @@ foreach($country as $key => $value){
   echo $key.''."の首都は".$value.''."です。";
   echo '<br>';
 }
+
 ?>
 
 
