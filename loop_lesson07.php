@@ -7,7 +7,7 @@ for ($i = 1; $i <= 1; $i++) {
     for ($i2 = 1; $i2 <= 1; $i2++) {
         echo "**";
         echo $i2;
-        echo "23";
+        echo "21";
         echo ("<br>");
         for ($i3 = 1; $i3 <= 1; $i3++) {
             echo "*";

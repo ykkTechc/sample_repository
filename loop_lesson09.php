@@ -13,14 +13,20 @@
  *  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
  */
 
-$arr = array(
-            array('a1' => 10, 'b2' => 7, 'c3' => 25),
-            array('a1' => 5,  'b2' => 8, 'c3' => 9),
-            array('a1' => 20, 'b2' => 12, 'c3' => 130),
-            array('d1' => 10, 'e2' => 5, 'f3' => 20),
-            array('d1' => 7, 'e2' => 8, 'f3' => 12),
-            array('d1' => 25, 'e2' => 9, 'f3' => 130),
-          );
+$arr = [
+            ['a1' => 10, 'b2' => 7,  'c3' => 25],
+            ['a1' => 5,  'b2' => 8,  'c3' => 9],
+            ['a1' => 20, 'b2' => 12, 'c3' => 130],
+            ['d1' => 10, 'e2' => 5,  'f3' => 20],
+            ['d1' => 7,  'e2' => 8,  'f3' => 12],
+            ['d1' => 25, 'e2' => 9,  'f3' => 130],
+            ['g1' => 42],
+            ['g1' => 22],
+            ['g1' => 162],
+            ['g1' => 35],
+            ['g1' => 27],
+            ['g1' => 164]
+];
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -47,19 +53,18 @@ th, td {
         $sum_3 += $arr_1[d1];
         $sum_4 += $arr_1[e2];
         $sum_5 += $arr_1[f3];
-        $sum_6 += $sum + $sum_1 + $sum_2 + $sum_3 + $sum_4 + $sum_5;
-    }
-
+        $sum_6 += $arr_1[g1];
+        // $sum_6 += $arr_1[a1] + $arr_1[b2] + $arr_1[c3] + $arr_1[d1] + $arr_1[e2] + $arr_1[f3];
+        // $sum_6 += $sum + $sum_1 + $sum_2 + $sum_3 + $sum_4 + $sum_5;
+    };
     ?>
     <tr><th>_____</th><th>_c1</th><th>_c2</th><th>_c3</th><th>横合計</th></tr>
     <tr><td>___r1</td><td>_10</td><td>__5</td><td>_20</td><td><?php echo "___".$sum;?></td></tr>
     <tr><td>___r2</td><td>__7</td><td>__8</td><td>_12</td><td><?php echo "___".$sum_1?></td></tr>
     <tr><td>___r3</td><td>_25</td><td>__9</td><td>130</td><td><?php echo "__".$sum_2?></td></tr>
-    <tr><td>縦合計</td><td><?php echo "_".$sum_3?></td><td><?php echo "_".$sum_4 ?></td><td><?php echo $sum_5 ?></td><td><?php echo $sum_6 ?></td></tr>
-
+    <tr><td>縦合計</td><td><?php echo "_".$sum_3?></td><td><?php echo "_".$sum_4 ?></td><td><?php echo $sum_5 ?></td><td><?php echo "__".$sum_6 ?> </td> </tr>
 </table>
-
-
+    <!-- ここにテーブル表示 -->
 </body>
 
 </html>
