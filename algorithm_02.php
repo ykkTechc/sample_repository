@@ -1,5 +1,4 @@
 <?php
-
 // ＜アルゴリズムの注意点＞
 // アルゴリズムではこれまでのように調べる力ではなく物事を論理的に考える力が必要です。
 // 検索して答えを探して解いても考える力には繋がりません。
@@ -24,19 +23,19 @@ $product = 1000; // 商品金額
 
 function calc($yen, $product) {
     $change = $yen - $product;
-                                      
+
       if ($change == 0) return ['お釣りなし'];
 
       if ($change < 0) return [$change . '円足りません'];
 
     $curr = [10000, 5000, 1000, 500, 100, 50, 10, 5, 1];
     $tmp = [];
-        foreach ($curr as $val) {
+    foreach ($curr as $val) {
 
         if ($change < $val) continue;
         $tmp[] = [$val, intdiv($change, $val)];
         $change = $change % $val;
-        }
+    }
 
     echo $yen . '円で購入した場合';
     echo "<br>";
@@ -52,13 +51,14 @@ function calc($yen, $product) {
 </head>
 <body>
     <section>
-        <?php
-        [$result, $ar] = calc($yen, $product);
-           echo $result . '<br>' . PHP_EOL;
-           foreach ($ar as [$key, $val]) {
-               echo $key . '円 x ' . $val . '枚<br>' . PHP_EOL;
-           }
-        ?>
+<?php
+
+[$result, $ar] = calc($yen, $product);
+    echo $result . '<br>' . PHP_EOL;
+foreach ($ar as [$key, $val]) {
+    echo $key . '円 x ' . $val . '枚<br>' . PHP_EOL;
+}
+?>
     </section>
 </body>
 
