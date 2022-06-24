@@ -1,20 +1,20 @@
 ﻿<?php
 $scores = array(10,60,90,70,50);
- foreach ($scores as $score) {
-   if ($score>=80) {
-    $count = '優';
-   }
-   elseif ($score>=60) {
-    $count = '良';
-   }
-   elseif ($score>=40) {
-    $count = '可';
-   }
-   else {
-    $count = '不可';
-   }
-   echo $score.'は'.$count.'です。' ;
- }
+foreach ($scores as $score) {
+    if ($score>=80) {
+        $count = '優';
+    };
+    elseif ($score>=60) {
+        $count = '良';
+    };
+    elseif ($score>=40) {
+        $count = '可';
+    };
+    else {
+        $count = '不可';
+    };
+        echo $score.'は'.$count.'です。' ;
+};
 ?>
 
 <!-- 

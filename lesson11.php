@@ -2,9 +2,9 @@
 date_default_timezone_set('Asia/Tokyo');
 echo date("Y年m月d日 H時i分s秒");
 echo '<br>';
-echo date("Y年m月d日 H時i分s秒",strtotime("+3 day"));
+echo date("Y年m月d日 H時i分s秒"strtotime("+3 day"));
 echo '<br>';
-echo date("Y年m月d日 H時i分s秒",strtotime("-12 hour"));
+echo date("Y年m月d日 H時i分s秒"strtotime("-12 hour"));
 echo '<br>';
 
 date_default_timezone_set('Asia/Tokyo');
