@@ -18,28 +18,35 @@
 // 100円玉で購入した場合、
 // 50円足りません。
 
-$yen = 10000;   // 購入金額
-$product = 1000; // 商品金額
+$yen = 100;   // 購入金額
+$product = 150; // 商品金額
 
 function calc($yen, $product) {
-    $change = $yen - $product;
-
-      if ($change == 0) return ['お釣りなし'];
-
-      if ($change < 0) return [$change . '円足りません'];
-
-    $curr = [10000, 5000, 1000, 500, 100, 50, 10, 5, 1];
-    $tmp = [];
-    foreach ($curr as $val) {
-
-        if ($change < $val) continue;
-        $tmp[] = [$val, intdiv($change, $val)];
-        $change = $change % $val;
+    if ($yen < 500) {
+        echo $yen."円玉で購入した場合、";
+        echo "<br/>";
+    } else {
+        echo $yen."円札で購入した場合、";
+        echo "<br/>";
     }
 
-    echo $yen . '円で購入した場合';
-    echo "<br>";
-    return ['お釣り', $tmp];
+
+    if ($yen < $product) {
+        echo ($product - $yen) . '円足りません。';
+        return;
+    }
+    $change = $yen - $product;
+    $money = array(10000,5000,1000,500,100,50,10,5,1);{
+    foreach ($money as $i => $j) {
+        $number[$i] = floor($change / $j);
+        $change -= $j * $number[$i];
+        if ($j > 500) {
+            echo $j . "円札×" . $number[$i] . "枚" . "、";
+        } elseif ($j < 10000) {
+            echo $j . "円玉×" . $number[$i] . "枚" . "、";
+        }
+    }
+    }
 }
 
 ?>
@@ -51,14 +58,7 @@ function calc($yen, $product) {
 </head>
 <body>
     <section>
-<?php
-
-[$result, $ar] = calc($yen, $product);
-    echo $result . '<br>' . PHP_EOL;
-foreach ($ar as [$key, $val]) {
-    echo $key . '円 x ' . $val . '枚<br>' . PHP_EOL;
-}
-?>
+      <?php echo calc($yen, $product); ?>
     </section>
 </body>
 

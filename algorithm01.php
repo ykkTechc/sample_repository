@@ -28,11 +28,11 @@
 
 function nabeatu($i)
 {
-    if (($i % 15) === 0) {
-        return "アホわん";
-    } elseif (($i % 3) === 0) {
+    if (($i % 3 === 0) && ($i % 5 === 0)) {
+        return $i." アホわん";
+    } elseif (($i % 3) === 0 ) {
         return $i." アホ";
-    } elseif (($i % 5) === 0) {
+    } elseif (($i % 5) === 0 ) {
         return $i." わん";
     } else {
         return $i;
@@ -48,13 +48,12 @@ function nabeatu($i)
 <body>
     <section>
         <?php
-        function aho_wan_echo($t, $i)
+        function aho_wan_echo($t,$i)
         {
-            echo nabeatu($i),'<br>';
+          echo nabeatu($i),'<br>';
         }
         array_reduce(range(1, 100), 'aho_wan_echo');
         ?>
     </section>
 </body>
-
 </html>
