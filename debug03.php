@@ -10,7 +10,8 @@
 // 3回目の勝利です。
 
 
-if (! isset($_SESSION['result'])) {
+session_start();
+if (!isset($_SESSION['result'])) {
     $_SESSION['result'] = 0;
 }
 
@@ -30,7 +31,6 @@ class Player
                 $janken = 'パー';
                 break;
             default:
-                break;
         }
         return $janken;
     }
@@ -82,7 +82,7 @@ class Battle
         $this->second = $enemy->getChoice();
     }
 
-    public function judge()
+    public function judge(): string
     {
         if ($this->first === $this->second) {
             return '引き分け';
@@ -115,12 +115,16 @@ class Battle
     
     public function countVictories()
     {
-        session_start();
-        if ($this->judge() === '勝ち') {
-            $_SESSION['result'] += + 1;
+        if (($this->judge() === '勝ち')) {
+            $_SESSION['result'] += 1;
         }
         return $_SESSION['result'];
     }
+
+    // public function getVictories()
+    // {
+    //     return $_SESSION['result'];
+    // }
 
     public function showResult()
     {
@@ -128,7 +132,7 @@ class Battle
     }
 }
 
-if (! empty($_POST)) {
+if (!empty($_POST)) {
     $me    = new Me($_POST['last_name'], $_POST['first_name'], $_POST['choice'], $_POST['choice']);
     $enemy = new Enemy();
     echo $me->getName().'は'.$me->getChoice().'を出しました。';
