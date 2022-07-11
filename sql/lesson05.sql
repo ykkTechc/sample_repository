@@ -1,0 +1,1 @@
+SELECT * FROM `countries` WHERE life_expectancy >= 56 and life_expectancy <= 76

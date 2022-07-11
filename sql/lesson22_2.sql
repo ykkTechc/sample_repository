@@ -1,0 +1,1 @@
+SELECT SUM(surface_area) AS 'アジアの最小面積' FROM `countries` WHERE continent = 'Asia'
