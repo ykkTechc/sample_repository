@@ -1,2 +1,3 @@
 SELECT`name`
-FROM `countries`
+FROM
+    `countries`

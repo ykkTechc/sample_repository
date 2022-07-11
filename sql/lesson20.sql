@@ -1,4 +1,7 @@
-SELECT `name`,
-       LENGTH(`name`)
-FROM `countries`
-ORDER BY LENGTH(name) DESC
+SELECT
+    `name`,
+    LENGTH(`name`)
+FROM
+    `countries`
+ORDER BY
+    LENGTH(name) DESC

@@ -1,2 +1,4 @@
-SELECT `region`
-FROM `countries`
+SELECT
+    `region`
+FROM
+    `countries`

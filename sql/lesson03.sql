@@ -1,3 +1,6 @@
-SELECT *
-FROM `countries`
-WHERE continent not IN ('Europe')
+SELECT
+    *
+FROM
+    `countries`
+WHERE
+    continent not IN('Europe')
