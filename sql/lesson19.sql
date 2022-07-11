@@ -1,1 +1,4 @@
-SELECT `name`,LENGTH(`name`) FROM `countries` ORDER BY LENGTH(name) DESC
+SELECT SUBSTRING(code, 1, 1),
+       `name`
+FROM `countries`
+WHERE 1

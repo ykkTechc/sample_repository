@@ -1,9 +1,4 @@
-test
-SELECT 
-`celebrities`.name,
-`countries`.name AS '国名'
-FROM 
-`celebrities`,
-`countries` 
-WHERE
-`celebrities`.country_code = `countries`.code
+SELECT celebrities.name,
+       countries.name
+FROM celebrities
+LEFT JOIN countries ON celebrities.country_code = countries.code

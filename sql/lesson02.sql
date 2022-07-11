@@ -1,1 +1,3 @@
-SELECT * FROM `countries` WHERE continent = 'Europe'
+SELECT *
+FROM `countries`
+WHERE continent = 'Europe'

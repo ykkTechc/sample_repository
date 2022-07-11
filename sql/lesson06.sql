@@ -1,1 +1,5 @@
-SELECT * FROM `cities` WHERE country_code IN ('ALB', 'NLB', 'DZA')
+SELECT *
+FROM `cities`
+WHERE country_code IN ('ALB',
+                       'NLB',
+                       'DZA')

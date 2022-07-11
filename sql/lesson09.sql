@@ -1,1 +1,3 @@
-SELECT * FROM `countries` WHERE name LIKE '%st%'
+SELECT *
+FROM `countries`
+WHERE name LIKE '%ia'

@@ -1,1 +1,3 @@
-SELECT * FROM `countries` WHERE population >= 100000
+SELECT *
+FROM `countries`
+WHERE continent not IN ('Europe')

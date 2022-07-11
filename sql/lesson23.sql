@@ -1,4 +1,3 @@
-SELECT countries.name,countrylanguages.language
-FROM `countries` 
-INNER JOIN `countrylanguages`
-WHERE countries.code = countrylanguages.country_code
+SELECT MIN(surface_area) AS 'アジアの最小表面積'
+FROM `countries`
+WHERE continent = 'Asia'

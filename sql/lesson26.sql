@@ -1,7 +1,6 @@
-SELECT 
-`celebrities`.`name`, `countries`.`name`, `countrylanguages`.`language`
-FROM celebrities 
-INNER JOIN countries
-ON celebrities.country_code = countries.code INNER JOIN countrylanguages
-ON celebrities.country_code = countrylanguages.country_code
-AND countrylanguages.is_official = TRUE
+SELECT countries.name AS '国名',
+       cities.name AS '市区町村名',
+       countrylanguages.language
+FROM countries
+INNER JOIN countrylanguages ON countries.code = countrylanguages.country_code
+INNER JOIN cities ON countries.code = cities.country_code

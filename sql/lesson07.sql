@@ -1,1 +1,3 @@
-SELECT * FROM `countries` WHERE indep_year IS NULL
+SELECT *
+FROM `countries`
+WHERE indep_year IS NULL

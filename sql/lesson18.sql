@@ -1,1 +1,6 @@
-SELECT SUBSTRING(code,1,1),`name` FROM `countries` WHERE 1
+SELECT name,
+       life_expectancy,
+       indep_year
+FROM `countries`
+ORDER BY life_expectancy DESC,
+         indep_year DESC

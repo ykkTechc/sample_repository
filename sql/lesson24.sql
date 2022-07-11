@@ -1,11 +1,3 @@
-SELECT 
-countries.name AS '国名',
-cities.name AS '市区町村名',
-countrylanguages.language
-FROM 
-countries 
-INNER JOIN countrylanguages 
-ON countries.code = countrylanguages.country_code 
-INNER JOIN 
-cities 
-ON countries.code = cities.country_code
+SELECT SUM(surface_area) AS 'アジア大陸の表面積の合計'
+FROM `countries`
+WHERE continent = 'Asia'
