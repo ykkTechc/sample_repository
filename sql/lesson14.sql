@@ -1,0 +1,4 @@
+SELECT
+    `region`
+FROM
+    `countries`
