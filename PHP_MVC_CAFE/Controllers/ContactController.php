@@ -23,7 +23,6 @@ class ContactController {
 
     public function contact($data) 
     {
-        var_dump($data);
         $this->Contact->contact($data);
     }
 
@@ -35,17 +34,17 @@ class ContactController {
 
 
     public function index() {
-      $pageFlag = 0;
-      if(isset($this->request['get']['pageFlag'])) {
-          $pageFlag = $this->request['get']['pageFlag'];
-      }
+         $pageFlag = 0;
+        if (isset($this->request['get']['pageFlag'])) {
+            $pageFlag = $this->request['get']['pageFlag'];
+}
 
-      $contacts = $this->Contact->findAll($pageFlag);
-      $params = [
+        $contacts = $this->Contact->findAll($pageFlag);
+        $params = [
           'contacts' => $contacts,
           'page' => $pageFlag // ページ番号
-      ];
-      return $params;
-}
+        ];
+        return $params;
+    }
 }
 ?>

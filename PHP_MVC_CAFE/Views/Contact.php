@@ -10,16 +10,16 @@ require_once(ROOT_PATH .'Controllers/ContactController.php');
 
     
 if (!empty($_GET["id"])) {
-  try {
-      $dbh = new PDO('mysql:dbname='.DB_NAME.';host='.DB_HOST, DB_USER, DB_PASSWD);
+    try {
+        $dbh = new PDO('mysql:dbname='.DB_NAME.';host='.DB_HOST, DB_USER, DB_PASSWD);
 
-      $stmt = $dbh->prepare('DELETE FROM contacts WHERE id = :id');
+        $stmt = $dbh->prepare('DELETE FROM contacts WHERE id = :id');
 
-      $stmt->execute(array(':id' => $_GET["id"]));
+        $stmt->execute(array(':id' => $_GET["id"]));
 
-  } catch (Exception $e) {
-      echo 'エラーが発生しました。:' . $e->getMessage();
-  }    
+    } catch (Exception $e) {
+        echo 'エラーが発生しました。:' . $e->getMessage();
+    }    
 }
 
 $create = new ContactController();
@@ -76,17 +76,16 @@ function confirmFunction1() {
 <?php if($pageFlag === 0 ) : ?>
 
 <!-- エラー文表示 -->
-<?php 
-if(!empty($errors) &&  !empty($_POST['btn_confirm'])) : 
-
-?>
-<?php echo '<ul>' ; ?>
-<?php
-      foreach ($errors as $error){
-      echo '<li>'. $error . '</li>' ;
-    }
-?>
-<?php echo '</ul>' ; ?>
+    <?php 
+    if(!empty($errors) &&  !empty($_POST['btn_confirm'])) : 
+        ?>
+        <?php echo '<ul>' ; ?>
+        <?php
+        foreach ($errors as $error){
+            echo '<li>'. $error . '</li>' ;
+        }
+        ?>
+        <?php echo '</ul>' ; ?>
 <?php endif ;?>
 
 
