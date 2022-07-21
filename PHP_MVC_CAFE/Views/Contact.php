@@ -39,7 +39,6 @@ if (!empty($_POST['btn_confirm']) && empty($errors)) {
 /// 完了画面
 if (!empty($_POST['btn_submit'])) {
     $pageFlag = 2;
-    var_dump($_POST);
     $create->contact($_POST); 
 
 }
@@ -63,7 +62,9 @@ if (!empty($_POST["btn_edit"])) {
 <script src="validation.js"></script>
 <script>
 function confirmFunction1() {
-confirm("外部のページを開きますか？");
+   var ret = confirm("削除を実行しますか？");
+   if(!ret) alert("削除をキャンセルしました");
+   return ret;
 }
 </script>
 </head>
@@ -133,7 +134,7 @@ if(!empty($errors) &&  !empty($_POST['btn_confirm'])) :
               <?php echo "<a href=edit.php?id=" . $content["id"] . ">編集</a>\n"; ?>
             </td>
             <td>
-            <?php echo "<a onclick=confirmFunction1() href=contact.php?id=" . $content["id"] . ">削除</a>\n"; ?>
+            <?php echo "<a onclick=' return confirmFunction1()' href=contact.php?id=" . $content["id"] . ">削除</a>\n"; ?>
             </td>
         </tr>
         </tbody>
@@ -178,14 +179,14 @@ if(!empty($errors) &&  !empty($_POST['btn_confirm'])) :
 
 <!-- 完了画面フォーム -->
 <?php if($pageFlag === 2 ) : ?>
-  <p>完了画面</p>
+  <h1>完了画面</h1>
 <br>
-お問合せ内容を送信しました。
+<p> お問合せ内容を送信しました。</p>
 <br>
-ありがとうございました。
+<p> ありがとうございました。</p> 
 <br>
 <form>
-<input type="submit" name="back" value="キャンセル">
+<input type="submit" name="back" value="トップへ">
 </form>
 <?php endif; ?>
 

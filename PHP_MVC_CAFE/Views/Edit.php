@@ -45,6 +45,7 @@ if (!empty($errors) && !empty($_POST['edit_confirm'])) {
 </head>
 <meta charset="utf-8">
 <script src="validation.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/st.css">
 </head>
 <body>
 
@@ -52,8 +53,9 @@ if (!empty($errors) && !empty($_POST['edit_confirm'])) {
 
 <title>編集</title>
                           <!-- $resultフォームの情報 -->
-    <div class="contact-form">
+    
         <h2>更新画面</h2>
+        <div class="form">
         <form action="" method="POST">
                 <input type="hidden" name="id" value="<?php if (!empty($result['id'])) echo(htmlspecialchars($result['id'], ENT_QUOTES, 'UTF-8'));?>">
             <p>
@@ -76,14 +78,19 @@ if (!empty($errors) && !empty($_POST['edit_confirm'])) {
                 <label>投稿内容：</label>
                 <input type="text" name="body" value="<?php if (!empty($result['body'])) echo(htmlspecialchars($result['body'], ENT_QUOTES, 'UTF-8'));?>">
             </p>
+            <p>上記の内容でよろしいですか？</p>
             <p>
-                <input type="submit" name="edit_confirm" id="btnConfirm"  value="編集する">
+                <input type="submit" name="edit_confirm" id="btnConfirm"  value="更新">
             </p>
         </form>
+        <form method="POST" action=Contact.php>
+            <p> 
+                <input type="submit" name="" value="キャンセル">
+            </p>  
+        </form>
         <br>
-        <p>上記の内容でよろしいですか？</p>
     </div>
-            <a href="Contact.php">キャンセル</a>
-            <script src="validation.js"></script>
+    
+            
 </body>
 </html> 
