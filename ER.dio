@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Zuprpmree0DB_T71sHAO" name="ページ1">
-        <mxGraphModel dx="905" dy="471" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="833" dy="731" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -33,7 +33,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="155" value="   id       (references型 NOT NULL)&#10; shop    (text型  NOT NULL)&#10;     hot    (text型  NOT NULL)&#10;     ice    (text型  NOT NULL)&#10;     chill   (text型  NOT NULL)&#10;     artifle (textarea型 NOTNULL)&#10;Fk user_id  (references型 NOT NULL)&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="6">
+                <mxCell id="155" value="    id       (references型 NOT NULL)&#10; 　shop (text型  NOT NULL)&#10;     hot    (text型  NOT NULL)&#10;     ice    (text型  NOT NULL)&#10;     chill   (text型  NOT NULL)&#10;     artifle (textarea型 NOTNULL)&#10;Fk user_id  (references型 NOT NULL)&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="6" vertex="1">
                     <mxGeometry y="30" width="209" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="59" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="6" edge="1">
@@ -297,7 +297,7 @@
                 <mxCell id="121" value="" style="line;strokeWidth=1;rotatable=0;dashed=0;labelPosition=right;align=left;verticalAlign=middle;spacingTop=0;spacingLeft=6;points=[];portConstraint=eastwest;" parent="1" vertex="1">
                     <mxGeometry x="540" y="475" width="60" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="157" value="" style="endArrow=none;html=1;rounded=0;entryX=0.539;entryY=1.034;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="84">
+                <mxCell id="157" value="" style="endArrow=none;html=1;rounded=0;entryX=0.539;entryY=1.034;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="84" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="600" y="480" as="sourcePoint"/>
                         <mxPoint x="600.0799999999999" y="410.996" as="targetPoint"/>
