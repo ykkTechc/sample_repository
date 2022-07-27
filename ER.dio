@@ -1,13 +1,13 @@
 <mxfile host="65bd71144e">
     <diagram id="Zuprpmree0DB_T71sHAO" name="ページ1">
-        <mxGraphModel dx="427" dy="433" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="590" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value=" Users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="40" y="202" width="300" height="198" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="Pk  id                                 (int型 NOTNULL)&#10;Uk  email                            (string型 NOT NULL) 　　　　　　      　&#10;       name                            (string型 NOT NULL)&#10;       sub_name                    (string型 NOT NULL)      &#10;       encrypted_password   (string型 NOT NULL)&#10;       lastname                      (string型 NOT NULL)&#10;       sub_lastname              (string型 NOT NULL)&#10;       tel                                 (string型 NOTNULL)&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="2" vertex="1">
+                <mxCell id="3" value="Pk  id                                  (int型 NOTNULL)&#10;Uk  email                            (varchar型NOT NULL)&#10;       name                            (varchar型NOT NULL)&#10;       sub_name                    (varchar型NOT NULL)      &#10;       encrypted_password   (varchar型NOT NULL)&#10;       lastname                      (varchar型 NOT NULL)&#10;       sub_lastname              (varchar型NOT NULL)&#10;       tel                                  (varchar型  NULL)&#10;      &#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="2" vertex="1">
                     <mxGeometry y="30" width="300" height="168" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="Comments" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
@@ -33,7 +33,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="155" value="    id       (int型 NOT NULL)&#10; 　shop (text型  NOT NULL)&#10;     hot    (text型  NOT NULL)&#10;     ice    (text型  NOT NULL)&#10;     chill   (text型  NOT NULL)&#10;     artifle (text型 NOTNULL)&#10;Fk user_id  (int型 NOT NULL)&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="6" vertex="1">
+                <mxCell id="155" value="Pk id       (int型 NOT NULL)&#10; 　shop (varchar型NOT NULL)&#10;     hot    (varchar型NOT NULL)&#10;     ice    (varchar型NOT NULL)&#10;     chill   (varchar型NOT NULL)&#10;     artifle (varchar型NOT NULL)&#10;Fk user_id  (int型 NOT NULL)&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="6" vertex="1">
                     <mxGeometry y="30" width="209" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="59" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="6" edge="1">
@@ -125,13 +125,13 @@
                         <mxRectangle x="481" y="323" width="70" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="84" value="Pk  id             (int型 NOT NULL&#10;Fk  sauna_id (int型 NOT NULL&#10;Fk  tag_id      (int型 NOT NULL&#10;・" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="83" vertex="1">
+                <mxCell id="84" value="Pk  id             (int型 NOT NULL)&#10;Fk  sauna_id (int型 NOT NULL)&#10;Fk  tag_id      (int型 NOT NULL)&#10;・" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="83" vertex="1">
                     <mxGeometry y="30" width="219" height="58" as="geometry"/>
                 </mxCell>
                 <mxCell id="110" value="Tag" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="294" y="435" width="246" height="95" as="geometry"/>
                 </mxCell>
-                <mxCell id="111" value="Pk  id          (int型　NOT NULL)&#10;      tag_id   (int型　NULL)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="110" vertex="1">
+                <mxCell id="111" value="Pk  id          (int型　NOT NULL)&#10;      content (varchar  NULL)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="110" vertex="1">
                     <mxGeometry y="30" width="246" height="65" as="geometry"/>
                 </mxCell>
                 <mxCell id="125" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
@@ -202,7 +202,7 @@
                         <mxPoint x="113.5" y="94" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="163" value="Sauna" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
+                <mxCell id="163" value="Saunas" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="481" y="150" width="209" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="164" value="" style="endArrow=none;html=1;rounded=0;" parent="163" edge="1">
@@ -298,12 +298,12 @@
                         <mxPoint x="544" y="140" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="179" value="sauna_tag" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
+                <mxCell id="179" value="Sauna_Tag" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="481" y="323" width="219" height="88" as="geometry">
                         <mxRectangle x="481" y="323" width="70" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="185" value="Tag" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
+                <mxCell id="185" value="Tags" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="294" y="435" width="246" height="95" as="geometry"/>
                 </mxCell>
                 <mxCell id="188" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
